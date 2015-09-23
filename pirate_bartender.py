@@ -1,5 +1,6 @@
 """Module-level docstring; which describe the module's purpose,
 as well as elaborating on constants, notes, usage.
+"""This code will ask a series of questions, 
 
 Tip:
     random.choice(): --
@@ -12,25 +13,25 @@ import random
 # These are the type of drink and follow up question
 # this is a constant
 # questions (rename): QUESTIONS
-questions = {
-    "strong": "Do ye like yer drinks strong?",
-    "salty": "Do ye like it with a salty tang?",
-    "bitter": "Are ye a lubber who likes it bitter?",
-    "sweet": "Would ye like a bit of sweetness with yer poison?",
-    "fruity": "Are ye one for a fruity finish?"
+QUESTIONS = {
+        "strong": "Do ye like yer drinks strong?",
+        "salty": "Do ye like it with a salty tang?",
+        "bitter": "Are ye a lubber who likes it bitter?",
+        "sweet": "Would ye like a bit of sweetness with yer poison?",
+        "fruity": "Are ye one for a fruity finish?"
 }
 
 # These are the corresponding ingredients
-ingredients = {
-    "strong": ["glug of rum", "slug of whisky", "splash of gin"],
-    "salty": ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
-    "bitter": ["shake of bitters", "splash of tonic", "twist of lemon peel"],
-    "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
-    "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
+INGREDIENTS = {
+        "strong": ["glug of rum", "slug of whisky", "splash of gin"],
+        "salty": ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
+        "bitter": ["shake of bitters", "splash of tonic", "twist of lemon peel"],
+        "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
+        "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
 # Random drink names
-drinkname = ["Fuzzy Navel", "Bridge Troll", "Death Door", "Ring of fire"]
+DRINKNAME = ["Fuzzy Navel", "Bridge Troll", "Death Door", "Ring of fire"]
 
 
 def ask_questions(answers):
@@ -69,7 +70,7 @@ def create_drink(answers, ingredients):
 
         if value is True:
             # use random.choice instead
-            new_drink ="{0}".format(ingredients[key][random.randint(0, 2)])
+            new_drink ="{0}".format(random.choice(ingredients))
 
     return new_drink
 
