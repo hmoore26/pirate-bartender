@@ -1,5 +1,3 @@
-"""Module-level docstring; which describe the module's purpose,
-as well as elaborating on constants, notes, usage.
 """This code will ask a series of questions, 
 
 Tip:
